@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MaderAvilés</title>
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <div id="menu" style="display: block;">
+        <button onclick="mostrargesPed()">Pedidos</button>
+        <button onclick="mostrargesPie()">Piezas</button>
+    </div>
+
+    <div id="pedidos" style="display: none;">
+        <h2>Gestión de pedidos</h2>
+        <label for="numero">Número de pedido: </label>
+        <input type="text" id="numero">
+        <span id="a" style="display: none; color: red;"> *El número de pedido no debe existir y tiene que ser entero y >= 1</span><br>
+        
+        <label for="cliente">Cliente: </label>
+        <input type="text" id="cliente">
+        <span id="b" style="display: none; color: red;"> *El cliente debe ser tipo string</span><br> 
+        
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha">
+        <span id="c" style="display: none; color: red;"> *La fecha debe estar en formato correcto y no ser posterior al día de registro</span><br> 
+        
+        <label for="procesado">Procesado: </label>
+        <input type="checkbox" id="procesado">
+        <span id="d" style="display: none; color: red;"> *El procesado debe ser booleano</span><br> 
+        
+        <label for="servido">Servido: </label>
+        <input type="checkbox" id="servido">
+        <span id="e" style="display: none; color: red;"> *El servido debe ser booleano</span><br>
+        
+        <button onclick="altaPedido()">Alta</button>
+        <button onclick="bajaPedido()">Baja</button>
+        <button onclick="modifPedido()">Modificar</button>
+        <button onclick="consulPedido()">Consultar</button><br><br>
+        <button onclick="detalle()">Detalles</button>
+        <div id="datos"></div><br><br>
+        <div id="tabla-piezas"></div><br>
+        <button onclick="atras()">Volver</button>
+    </div>
+
+    <div id="piezas" style="display: none;">
+        <h2>Gestión de piezas</h2>
+        <label for="numero">Número de pieza: </label>
+        <input type="text" id="pie">
+        <span id="f" style="display: none; color: red;"> *El número de pieza no debe existir y tiene que ser entero y >= 1</span><br>
+        
+        <label for="numero">Número de pedido: </label>
+        <input type="text" id="pe">
+        <span id="g" style="display: none; color: red;"> *El número de pedido debe existir en la lista de pedidos</span><br>
+        
+        <label for="largo">Largo: </label>
+        <input type="text" id="largo">
+        <span id="h" style="display: none; color: red;"> *El largo debe ser un número</span><br> 
+
+        <label for="ancho">Ancho: </label>
+        <input type="text" id="ancho">
+        <span id="i" style="display: none; color: red;"> *El ancho debe ser un número</span><br> 
+
+        <label for="grosor">Grosor: </label>
+        <input type="text" id="grosor">
+        <span id="j" style="display: none; color: red;"> *El grosor debe ser un número</span><br>
+        
+        <label for="grosor">Color: </label>
+        <input type="text" id="color">
+        <span id="k" style="display: none; color: red;"> *El color debe ser tipo string</span><br>
+        
+        <label for="caras">AmbasCaras: </label>
+        <input type="checkbox" id="caras">
+        <span id="l" style="display: none; color: red;"> *Debe ser un booleano</span><br> 
+        
+        <label for="cortada">Cortada: </label>
+        <input type="checkbox" id="cortada">
+        <span id="m" style="display: none; color: red;"> *Debe ser un booleano</span><br>
+        
+        <button onclick="altaPieza()">Alta</button>
+        <button onclick="bajaPieza()">Baja</button>
+        <button onclick="modifPieza()">Modificar</button>
+        <button onclick="consulPieza()">Consultar</button><br>
+        <div id="datospie"></div>
+        <button onclick="atras()">Volver</button>
+    </div>
+</body>
+</html>    
